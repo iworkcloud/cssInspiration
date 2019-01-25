@@ -1,19 +1,40 @@
 <template>
-  <div class="g-container">
-    <router-link to="/grid" class="g-item">grid</router-link>
-    <router-link to="/columnCount" class="g-item">column-count</router-link>
+  <div>
+    <head-top title="标题" 
+    :left-options="leftOptions"
+    :right-options="rightOptions"></head-top>
+    <div class="g-container">
+      <router-link to="/grid" class="g-item">grid</router-link>
+      <router-link to="/columnCount" class="g-item">column-count</router-link>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  
-  data () {
-    return {
-      
-    }
+  import headTop from '@/components/header'
+
+  export default {
+    
+    data () {
+      return {
+        
+      }
+    },
+    components:{headTop},
+    computed: {
+      leftOptions (){
+        return {
+          showBack:false
+        }
+      },
+      rightOptions(){
+        return {
+          showMore:true
+        }
+      }
+    },
+
   }
-}
 </script>
 
 <style lang="scss" scoped>

@@ -13,14 +13,15 @@
           <span v-show="title">{{title}}</span>
       </slot>
     </h1>
-    <div class="vux-header-right">
+    <div class="vux-header-right" v-if="rightOptions.showMore">
       搜索
     </div>
   </div>
 </template>
+
 <script>
   export default {
-    name: 'x-header',
+    
     data () {
       return {
         
@@ -42,7 +43,6 @@
       _leftOptions () {
         return Object.assign({
           showBack: true,
-          preventGoBack: false
         }, this.leftOptions || {})
       }
     },

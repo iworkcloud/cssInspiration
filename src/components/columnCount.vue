@@ -1,8 +1,6 @@
 <template>
   <div>
-    <head-top title="标题">
-      <!-- <p slot="overwrite-left">aa</p> -->
-    </head-top>
+    <head-top title="标题"></head-top>
     <div class="main clearfix">
         <div class="m-palace">1</div>
         <div class="m-palace">2</div>
@@ -33,6 +31,7 @@
       }
     },
     components:{headTop},
+    computed: {},
   }
 </script>
 

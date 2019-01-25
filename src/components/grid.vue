@@ -1,25 +1,30 @@
 <template>
-  <div class="g-container">
-    <div class="g-item">1</div>
-    <div class="g-item">2</div>
-    <div class="g-item">3</div>
-    <div class="g-item">4</div>
-    <div class="g-item">5</div>
-    <div class="g-item">6</div>
-    <div class="g-item">7</div>
-    <div class="g-item">8</div>
+  <div>
+    <head-top title="标题"></head-top>
+    <div class="g-container">
+      <div class="g-item">1</div>
+      <div class="g-item">2</div>
+      <div class="g-item">3</div>
+      <div class="g-item">4</div>
+      <div class="g-item">5</div>
+      <div class="g-item">6</div>
+      <div class="g-item">7</div>
+      <div class="g-item">8</div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'my-grid',
-  data () {
-    return {
-      
-    }
+  import headTop from '@/components/header'
+  export default {
+    name: 'my-grid',
+    data () {
+      return {
+        
+      }
+    },
+    components:{headTop},
   }
-}
 </script>
 
 <style lang="scss" scoped>
